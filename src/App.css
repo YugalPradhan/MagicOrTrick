@@ -1,0 +1,125 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  background-image: url('../public/images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+} 
+.game {
+  display: flex;
+ width:80%;
+ height:435px;
+ margin: auto;
+ padding: 1rem;
+ justify-content: center;
+ background: none;
+}
+
+/* Column layout */
+.column {
+  position: relative;
+ width:90px;
+ margin: 0px 1.5rem;
+ background: none;
+ cursor: pointer;
+ transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Card layout */
+.column:hover{
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 30px white ;
+}
+.card {
+  width: 100%;
+  height:125px;
+  position: absolute;
+  border-radius: 3px;
+  top: 0;
+  overflow: hidden;
+  transition: top 0.3s ease; 
+}
+.finalCard {
+  margin: auto;
+  width: 90px;
+  border-radius: 3px;
+  animation-name:one;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  box-shadow: 2px 2px 30px white ;
+  opacity: 0;
+}
+.credit{
+  color:#75f052;
+  text-align:center;
+  font-family: Kalam, cursive;
+  text-shadow:2px 2px 10px rgb(165, 165, 238);
+  animation-name:two;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+.again{
+  animation-name:two;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
+.button{
+  transition:all 0.2s;
+  border-radius: 4px;
+  background:#75f052;
+  padding:4px 20px;
+  box-shadow:1px 1px 5px white;
+  color:black;
+  margin-top: 10px;
+  animation-name:two;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay:3s;
+  opacity: 0;
+}
+.button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+@keyframes two{
+  0%{
+  opacity:0;  
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes one {
+  40%{
+  transform: rotate(-20deg);
+  opacity: 0.2;
+  }
+  80%{
+    transform: rotate(20deg);
+    opacity: 0.4;
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1.5);
+    
+  }
+}
+
+@media (min-width: 0px) and (max-width: 465px) {
+  .game{
+    width: 100%;
+  }
+  .column{
+    width: 100px;
+    
+  }
+}
+
+
+
